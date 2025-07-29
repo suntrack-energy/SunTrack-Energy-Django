@@ -1,5 +1,5 @@
 from django.urls import path
-from suntrack.views import index, servico, buscar
+from apps.suntrack.views import index, servico, buscar
 
 urlpatterns = [
     path('', index, name='index'),

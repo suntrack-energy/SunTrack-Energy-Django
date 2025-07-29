@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from suntrack.models import Servicos
+from apps.suntrack.models import Servicos
 
 def index(request):
     servicos = Servicos.objects.filter(publicada=True)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from suntrack.models import Servicos
+from apps.suntrack.models import Servicos
 
 class ListandoServicos(admin.ModelAdmin):
     list_display = ('id', 'titulo', 'publicada')
