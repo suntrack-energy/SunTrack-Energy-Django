@@ -2,6 +2,11 @@
     <div class="pagina-inicial">
         <header class="cabecalho">
             <img src="{% static '/assets/logo/Logo(1).png' %}" width="300px" alt="Logo SunTrack Energy"/>
+            {% for message in messages %}
+            <div class="alert alert-primary">
+                <p id="messages">{{ message }}</p>
+            </div>
+            {% endfor %}
             <div class="cabecalho__busca">
                 <form action="{% url 'buscar' %}">
                     <input type="text" class="busca__input" name="buscar" placeholder="O que você procura?">
@@ -15,6 +20,6 @@
             <section class="menu-lateral">
                 <nav class="menu-lateral__navegacao">
                     <a href="{% url 'index' %}"><img width="40px" src="{% static 'assets/icons/icon-home.png' %}" alt="Ícone de home">Home</a>
-                    <a href="#"><img width="40px" src="{% static 'assets/icons/icon-user.png' %}" alt="Ícone de user">Login</a>
+                    <a href="{% url 'login' %}"><img width="40px" src="{% static 'assets/icons/icon-user.png' %}" alt="Ícone de user">Login</a>
                 </nav>
             </section>
